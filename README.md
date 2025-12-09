@@ -64,34 +64,41 @@ Pkz-Sneakers/
 └── README.md              # Documentação
 ```
 
-## ⚙️ Como Rodar o Projeto Localmente
+## 🚀 Instalação e Configuração
 
-Pré-requisitos
-XAMPP (ou qualquer servidor Apache + MySQL)
-Git
+Siga os passos abaixo para rodar o projeto na sua máquina local.
 
-Passo a Passo
-Clone o repositório
+### 📋 Pré-requisitos
+Antes de começar, você vai precisar ter instalado:
+* [XAMPP](https://www.apachefriends.org/pt_br/index.html) (Apache + MySQL)
+* [Git](https://git-scm.com/downloads)
+
+---
+
+### 🔧 Passo a Passo
+
+- **1. Clone o repositório**
+Abra o seu terminal (Git Bash ou CMD) e digite:
+```bash
 git clone [https://github.com/pouskzin/Pkz-Sneakers.git](https://github.com/pouskzin/Pkz-Sneakers.git)
+```
+- **2. Configure o Banco de Dados**
 
-Configure o Banco de Dados
+Abra o phpMyAdmin acessando http://localhost/phpmyadmin.
+Crie um novo banco de dados chamado: pkzsneakers
+Clique na aba SQL e cole o script de criação das tabelas (disponível na seção "Modelagem" abaixo).
 
-Abra o phpMyAdmin (http://localhost/phpmyadmin).
-Crie um banco chamado pkzsneakers.
-Importe o script SQL ou crie as tabelas (ver abaixo).
+- **3. Configure a Conexão**
+Vá até a pasta do projeto e abra o arquivo: config/conexao.php
+Verifique se o usuário e senha batem com o seu XAMPP (Geralmente usuário root e senha vazia).
 
-Configure a Conexão
-
-Abra o arquivo config/conexao.php.
-Verifique se as credenciais (usuário/senha) batem com o seu XAMPP.
-
-Acesse
-Abra no navegador: http://localhost/Pkz-Sneakers
+- **4. Acesse o Projeto Tudo pronto! Abra o navegador e acesse:**
+http://localhost/Pkz-Sneakers
 
 ## 🗄️ Modelagem do Banco de Dados (Resumo)
 Para rodar o projeto, execute estes comandos SQL no seu banco:
 
-```
+```SQL
 -- Tabela de Usuários
 CREATE TABLE cadastros (
     id INT AUTO_INCREMENT PRIMARY KEY,
