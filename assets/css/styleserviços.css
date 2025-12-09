@@ -1,0 +1,85 @@
+/* Resetando margens e preenchimentos padrão */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a linha seguinte se não houver espaço suficiente */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
+    align-items: center;
+    /* Centraliza os itens verticalmente */
+    height: 170vh;
+    /* Ocupa toda a altura da tela */
+    text-align: center;
+    /* Alinha o texto no centro */
+}
+
+.item {
+    margin: 270px;
+    /* Ajusta o espaçamento entre os itens */
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    /* Alinha a imagem e a descrição verticalmente */
+    align-items: center;
+    /* Centraliza a imagem e a descrição horizontalmente */
+    max-width: 400px;
+    /* Ajuste a largura máxima do contêiner de mídia */
+}
+
+.image {
+    width: 150%;
+    height: 840px;
+    /* Define uma altura fixa para a imagem */
+    overflow: hidden;
+    /* Garante que qualquer excesso de imagem seja escondido */
+    margin-bottom: 20px;
+    /* Espaçamento entre a imagem e a descrição */
+    position: relative;
+    /* Necessário para o posicionamento absoluto da imagem */
+}
+
+.image img {
+    width: 100%;
+    /* Faz a imagem ocupar a largura total do contêiner */
+    height: 100%;
+    /* Faz a imagem ocupar a altura total do contêiner */
+    object-fit: cover;
+    /* Mantém a proporção da imagem e cobre a área do contêiner */
+    display: block;
+    /* Remove o espaço abaixo da imagem */
+}
+
+.description {
+    width: 100%;
+    /* Garante que a descrição ocupe a mesma largura que a imagem */
+    box-sizing: border-box;
+    /* Inclui padding e borda na largura total */
+}
+
+p {
+    margin: 0;
+    /* Remove a margem padrão do parágrafo */
+    font-size: 1.1rem;
+    /* Ajusta o tamanho da fonte conforme necessário */
+    line-height: 1.5;
+    /* Ajusta a altura da linha para garantir boa leitura */
+}
+
+.icon {
+    font-size: 25px;
+    /* Tamanho do ícone */
+    color: #ffffff;
+    /* Cor do ícone */
+    margin-left: 84%
+        /* Empurra o ícone para a direita */
+}

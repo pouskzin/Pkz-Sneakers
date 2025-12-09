@@ -1,0 +1,13 @@
+# Ignorar pastas pesadas
+node_modules/
+vendor/
+
+# Ignorar arquivos compactados grandes
+*.rar
+*.zip
+*.7z
+
+# Ignorar arquivos de sistema e senhas
+.env
+.DS_Store
+Thumbs.db

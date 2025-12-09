@@ -1,0 +1,308 @@
+/* style.css */
+
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header (Navbar) */
+.navbar {
+    background-color: #000;
+    padding: 1rem;
+}
+
+.navbar-brand img {
+    width: 80px;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffea00;
+}
+
+.iconsHeader {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-size: 1.5rem;
+}
+
+.iconShop,
+.icon {
+    color: #ffffff;
+    /* Define a cor dos ícones como branco */
+    transition: color 0.3s ease;
+    /* Animação suave para efeitos de hover */
+}
+
+.iconShop:hover,
+.icon:hover {
+    color: #ffea00;
+    /* Cor ao passar o mouse */
+}
+
+/* Modal Styles */
+#promoModal .modal-header {
+    background-color: #000;
+    /* Fundo preto para o cabeçalho do modal */
+    color: #fff;
+    /* Cor do texto do título */
+    border-bottom: none;
+    text-align: center;
+}
+
+#promoModal .modal-body {
+    padding: 1.5rem;
+    color: #333;
+    /* Cor do texto da descrição do modal */
+}
+
+#loginForm .form-control {
+    border-radius: 5px;
+    padding: 0.75rem;
+}
+
+/* Botão personalizado */
+#loginForm .btn-custom {
+    background-color: #000000;
+    /* Cor personalizada para o botão */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem;
+    transition: background-color 0.3s ease;
+}
+
+#loginForm .btn-custom:hover {
+    background-color: #000000;
+    /* Cor de hover para o botão */
+}
+
+#loginForm .btn-custom:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+/* Link de cadastro */
+#promoModal .modal-body a.text-primary {
+    color: #000000;
+    text-decoration: underline;
+}
+
+#promoModal .modal-body a.text-primary:hover {
+    color: #ffb800;
+    text-decoration: none;
+}
+
+/* Container principal do formulário */
+.form-container {
+    max-width: 400px;
+    margin: 5vh auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título do formulário */
+.form-container h2 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: normal;
+    /* Sem negrito */
+}
+
+/* Mensagem de sucesso ou erro */
+.message {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Input do formulário */
+.form-control {
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+}
+
+/* Botão customizado */
+.btn-custom {
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #000;
+    /* Fundo preto */
+    color: #fff;
+    /* Texto permanece branco */
+}
+
+/* Link de login e cadastro */
+.text-primary {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.text-primary:hover {
+    color: #004999;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+        margin: 20px;
+        box-shadow: none;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .sizes {
+        gap: 0.4rem;
+        justify-content: center;
+    }
+}
+
+/* Estilo para a seção de seleção de tamanho */
+.size-selection h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.sizes label {
+    position: relative;
+    cursor: pointer;
+}
+
+.sizes input[type="radio"] {
+    display: none;
+}
+
+.sizes span {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #000;
+    transition: background-color 0.3s;
+}
+
+.sizes input[type="radio"]:checked+span {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.sizes span:hover {
+    background-color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .sizes {
+        gap: 0.4rem;
+        justify-content: center;
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 0;
+    width: 100%;
+    margin-top: auto;
+    /* Garante que o footer "empurre" para o final */
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #fff;
+}
+
+footer p,
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    .navbar-nav .nav-link,
+    .icon {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Mantém o footer na parte inferior da página mesmo em telas pequenas */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}

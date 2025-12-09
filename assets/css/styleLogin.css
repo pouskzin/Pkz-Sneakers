@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background-color: #000000;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.btn-custom {
+    background-color: #000000;
+    color: #fff;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.icon {
+    font-size: 25px;
+    /* Tamanho do ícone */
+    color: #ffffff;
+    /* Cor do ícone */
+    margin-left: 84%;
+    /* Empurra o ícone para a direita */
+}

@@ -1,0 +1,100 @@
+/* style.css */
+
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000;
+}
+
+.navbar-brand img {
+    width: 80px;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00;
+}
+
+/* Container principal */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Título do produto */
+h1 {
+    margin-bottom: 1rem;
+}
+
+/* Imagem do produto */
+.img-fluid {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+footer p, footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        margin-right: 0.5rem;
+    }
+    
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

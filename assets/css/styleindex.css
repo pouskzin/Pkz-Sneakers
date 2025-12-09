@@ -1,0 +1,35 @@
+.navbar {
+    font-family: "Public Sans", sans-serif;
+    background-color: #000000;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.modal-content {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.btn-custom {
+    background-color: #000000;
+    color: #fff;
+}
+
+.icon {
+    font-size: 25px;
+    /* Tamanho do ícone */
+    color: #ffffff;
+    /* Cor do ícone */
+    margin-left: 84%
+        /* Empurra o ícone para a direita */
+}

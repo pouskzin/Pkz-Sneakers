@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Pkz Sneakers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg" style="background-color: #000000;">
+            <a class="navbar-brand mx-3" href="#"></a>
+            <img src="assets/images/logo.png" alt="" width="100" height="90">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos.php">Produtos</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+                <!-- Contêiner para os ícones de carrinho e usuário -->
+                <div class="iconsHeader">
+                    <a href="carrinho.html" class="nav-link iconShop">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                    <a href="cadastro.html" class="nav-link icon">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <h2 class="text-center mb-4">Cadastro</h2>
+            <!-- Mensagem de sucesso ou erro -->
+            <p id="message" class="message"></p>
+
+            <form id="cadastroForm">
+                <div class="mb-3">
+                    <label for="nomeInput" class="form-label">Nome</label>
+                    <input type="text" class="form-control" name="nome" id="nomeInput" placeholder="Digite seu nome"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" name="email" id="emailInput"
+                        placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="mb-3">
+                    <label for="senhaInput" class="form-label">Senha</label>
+                    <input type="password" class="form-control" name="senha" id="senhaInput"
+                        placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Cadastrar</button>
+            </form>
+            <p class="text-center mt-3">Já tem uma conta? <a href="login.html" class="text-primary">Faça login aqui!</a>
+            </p>
+        </div>
+    </div>
+    <!--Iniciando JavaScript formulario-->
+    <script>
+    document.getElementById("cadastroForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const messageElement = document.getElementById("message");
+
+        // Limpa mensagens anteriores e avisa que está a carregar
+        messageElement.textContent = "A processar...";
+        messageElement.className = "message text-warning"; 
+
+        // CORREÇÃO AQUI: Removi a barra "/" do início
+        fetch("controllers/cadastro.php", { 
+            method: "POST",
+            body: formData
+        })
+        .then(response => {
+            // Verifica se o arquivo foi encontrado (Status 200)
+            if (!response.ok) {
+                throw new Error("Erro HTTP: " + response.status); 
+            }
+            return response.text(); 
+        })
+        .then(text => {
+            try {
+                const data = JSON.parse(text); 
+                
+                if (data.success) {
+                    messageElement.textContent = data.message;
+                    messageElement.className = "message text-success";
+                    document.getElementById("cadastroForm").reset(); 
+                    
+                    setTimeout(() => {
+                        window.location.href = "login.html";
+                    }, 2000);
+                } else {
+                    messageElement.textContent = data.message;
+                    messageElement.className = "message text-danger";
+                }
+            } catch (e) {
+                console.error("Erro no PHP:", text);
+                messageElement.textContent = "Erro no sistema. Verifique o console (F12).";
+                messageElement.className = "message text-danger";
+            }
+        })
+        .catch(error => {
+            console.error("Erro capturado:", error);
+            // Agora a mensagem será mais específica no console
+            messageElement.textContent = "Erro ao encontrar o arquivo de cadastro.";
+            messageElement.className = "message text-danger";
+        });
+    });
+</script>
+    <!--Inicio footer-->
+    </div>
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Seção Sobre -->
+                <div class="col-md-4">
+                    <h5>Sobre Pkz Sneakers</h5>
+                    <p>Somos uma loja de sneakers com estilo streetwear, trazendo os lançamentos mais recentes e
+                        exclusivos para você.</p>
+                    <p>&copy; 2024 Pkz Sneakers. Todos os direitos reservados.</p>
+                </div>
+                <!-- Links Rápidos -->
+                <div class="col-md-2">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Início</a></li>
+                        <li><a href="produtos.php" class="text-light">Produtos</a></li>
+                        <li><a href="contato.html" class="text-light">Contato</a></li>
+                    </ul>
+                </div>
+                <!-- Redes Sociais -->
+                <div class="col-md-6 text-center">
+                    <h5>Redes Sociais</h5>
+                    <a href="https://www.instagram.com/pousk01" class="text-light">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
