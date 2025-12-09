@@ -140,5 +140,6 @@ CREATE TABLE itens_pedido (
 <sub><b>Kaio Augusto</b></sub>
 <br />
 
-[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/seu-perfil)]([https://www.linkedin.com/in/seu-perfil](https://www.linkedin.com/in/kaio-augusto-de-abreu-freire-27609121a/)) 
-[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:seu.email@gmail.com)](mailto:kaioaugustofreire@gmail.com)
+Entre em contato:
+- 💼 [LinkedIn](https://www.linkedin.com/in/kaio-augusto-de-abreu-freire-27609121a/)
+- ✉️ [Email](mailto:kaioaugustofreire@gmail.com)
