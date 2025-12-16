@@ -11,8 +11,8 @@ const DB_CONFIG = {
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'pkzsneakers',
-    port: 3307 // Confirme sua porta
+    database: '',
+    port: // Confirme sua porta
 };
 // =================================================
 
