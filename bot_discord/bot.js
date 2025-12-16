@@ -5,7 +5,7 @@ require('dotenv').config();
 
 // ================= CONFIGURAÇÕES =================
 const DISCORD_TOKEN = 'TOKEN_DO_DISCORD_AQUI'; 
-const SERVIDOR_ID = '1292930879571890298';
+const SERVIDOR_ID = 'ID_DO_SERVIDOR_AQUI';
 
 const DB_CONFIG = {
     host: 'localhost',
