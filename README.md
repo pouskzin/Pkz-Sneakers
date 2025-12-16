@@ -7,7 +7,7 @@
 
 ## 📄 Sobre o Projeto
 
-O **Pkz Sneakers** é uma plataforma de comércio eletrônico desenvolvida como Trabalho de Conclusão de Curso (TCC) para o curso Técnico em Informática do IFPR.
+O **Pkz Sneakers** é uma plataforma de comércio eletrônico desenvolvida do zero como Trabalho de Conclusão de Curso (TCC) para o curso Técnico em Informática do IFPR - Campus Jacarezinho. 
 
 O objetivo foi criar uma loja virtual completa "do zero" (sem uso de frameworks pesados no backend), focando na implementação da arquitetura **MVC (Model-View-Controller)**, segurança de dados e experiência do usuário.
 
@@ -72,6 +72,7 @@ Siga os passos abaixo para rodar o projeto na sua máquina local.
 Antes de começar, você vai precisar ter instalado:
 * [XAMPP](https://www.apachefriends.org/pt_br/index.html) (Apache + MySQL)
 * [Git](https://git-scm.com/downloads)
+* [Node.js](https://nodejs.org/pt). Baixar a biblioteca discord.js para rodar o bot.
 
 ---
 
