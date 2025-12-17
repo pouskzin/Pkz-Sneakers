@@ -109,6 +109,17 @@ CREATE TABLE cadastros (
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Tabela de Contatos
+CREATE TABLE mensagens_contato (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20),
+    mensagem TEXT NOT NULL,
+    status_envio TINYINT(1) DEFAULT 0, -- 0 = Pendente, 1 = Enviado
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Tabela de Produtos
 CREATE TABLE produtos (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -140,6 +151,8 @@ CREATE TABLE itens_pedido (
     preco_unitario DECIMAL(10,2),
     FOREIGN KEY (id_pedido) REFERENCES pedidos(id)
 );
+
+
 ```
 ## 👨‍💻 Autor
 
